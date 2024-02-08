@@ -1,0 +1,19 @@
+![Task1]()
+Answers:
+
+1. In this infrastructure, there are now two servers. Each server has it's own web server, application server, codebase, and database. Performance will improve especially where there are a lot of requests. There is also redundancy as if one server goes down, the other server can still handle requests. There is also a HA proxy loadbalancer. This will distribute the requests between the two servers. This will also help in the case of one server going down, the other server can still handle requests. This is a step towards high availability.
+
+2. My distribution algorithm is configured using the weighted round robin system in which each server is assigned a weight and the load balancer distributes requests to the servers based on the weight. The 'heavier' server will receive more requests. Or I can use the least connections algorithm in which the load balancer will send requests to the server with the least number of active connections. This will help in distributing the load evenly between the servers.
+
+3. My load balancer is enabling an Active-Active configuration ensuring that if at anytime a server fails, requests aren't sent to it until it passes the health check, during which time, the other server will handle the requests. The alternative is an Active-Passive configuration in which one server is always on standby and only becomes active when the primary server fails. This is not as efficient as the Active-Active configuration.
+
+4. A database Primary-Replica (Master-Slave) is a setup in which the primary database is used for read and write operations and the replica database is used for read operations. This is a good setup as it provides redundancy and fault tolerance. If the primary database goes down, the replica database can still handle read operations. And in synchronized mode, if there's a failover, the replica database can be promoted to the primary database.
+
+Issues with the infrastructure:
+
+1. SPOF still exists as there's one client and one load balancer. If the load balancer goes down, the website will be unavailable.
+
+2. There are security issues. HTTP is being used which isn't secure and can be intercepted. HTTPS should be used instead. Also, the database is not secure. It should be in a private network and not accessible from the internet. The database should also be encrypted. There is also no firewall which means incoming traffic isn't filtered and can all have access to the data.
+
+3. There isn't any monitoring or alerting system in place. This means that if there's an issue with the infrastructure, it won't be detected until it's too late.
+

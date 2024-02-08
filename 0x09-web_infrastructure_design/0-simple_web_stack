@@ -1,0 +1,25 @@
+![Task0]()
+Answers:
+
+1. A server in it's basic sense, is a computer with it's own hard disk, CPU and RAM. It also provides various services to other computers called clients and this is what is what separates it from a desktop computer. A server can be used to store files, run applications, host websites, and provide access to other computers.
+
+2. A domain name is a human-readable web address (e.g. google.com) that is used to access a website. It is used to identify one or more IP addresses. For example, the domain name google.com represents about a dozen IP addresses. Domain names are used in URLs to identify particular Web pages.
+
+3. In `www.foobar.com`, `www` is the subdomain and `foobar.com` is the domain name. A subdomain is a domain that is part of a larger domain. For example, `mail.google.com` is a subdomain of `google.com`.
+
+4. A web server, on it's hardware side, is a computer that stores web server software and a website's component files (for example, HTML documents, images, CSS stylesheets, and JavaScript files). A web server connects to the Internet and supports physical data interchange with other devices connected to the web.
+On it's software side, a web server is a server software that is used to distribute web pages to clients. It is used to host websites and deliver web pages to users. When a user enters a URL into their browser, the browser sends a request to the server, and the server sends the files back to the browser.
+
+5. An application server handles business logic. It provides the back-end logic for an application program. It is used to handle the dynamic content of a website, such as processing form data and database queries. It is used to host web applications and provide services to clients. It is also an intermediary between database servers and the web server.
+
+6. A database is a collection of information that is organized so that it can be easily accessed, managed and updated. It is a collection of data that is stored electronically.
+
+7. The server communicates with the client using the HTTP and TCP/IP protocols.
+
+Issues with the infrastucture:
+
+1. It has SPOF (Single Point of Failure) as there is only one server. If the server goes down, the website will be unavailable.
+
+2. Downtime when it is updating or maintaining the server which means that the website will be unavailable as there is no backup server.
+
+3. There is a single server being used and this server can be overloaded with requests which can lead to the website being slow or unresponsive. There's no scalability as there's only one server.

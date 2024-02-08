@@ -1,0 +1,25 @@
+![Task2]()
+
+Answers:
+
+1. Firewalls were added to control and filter traffic in order to ensure better security. Monitoring tools have also been added to ensure that the infrastructure is being monitored and that alerts are sent out in case of any issues. This will help in detecting issues early and resolving them before they become a problem.
+
+2. Firewalls are hardware or software security systems that control and filter traffic between a network and the internet. It acts as a barrier between a trusted network and an untrusted network. It is used to protect the infrastructure from unauthorized access and attacks. It can also be used to block certain traffic from entering the network.
+
+3. HTTPS is a secure version of HTTP. It is used to secure communication over a computer network. It uses data encryption to secure the connection between a client and a server. When HTTPS requests are sent, a public key with a SSL certicate is sent to the client. The client then uses the public key to encrypt the data and sends it back to the server. The server then uses the private key to decrypt the data. This ensures that the data is secure and can't be intercepted.
+
+4. Monitoring tools are used to collect data about the performance and actions of the application and/or server. The data they collect show any abnormalitites that may be causing performance to drop. This data is used to repair or improve the performance of the application and/or server. This is good as it will lead you to the area where your focus is needed the most. Monitoring tools can also be used to detect security breaches and other issues.
+
+5. Data is constantly being collected and analyzed. This data can be used to detect issues early and resolve them before they become a problem. This will help in ensuring that the infrastructure is always available and that the website is always up and running.
+
+6. First, monitoring tools are set up to monitor server metrics. They monitor the queries per second, to see if the traffic can be handled and if it is scalable enough for incoming traffic.
+
+Issues with the infrastructure:
+
+1. If one terminates SSL at the load balancer level, the traffic between the load balancer and the web servers is in plain text. This is a security risk. The SSL should be terminated at the web servers.
+
+2. Having only one MySQL server capable of accepting writes is a SPOF. If the MySQL server goes down, the website will be unavailable. A Master-Master setup should be used instead.
+
+3. Having servers with all the same components might be a problem. If one server goes down, the other server might not be able to handle the traffic. There should be a mix of servers with different components.
+
+ 

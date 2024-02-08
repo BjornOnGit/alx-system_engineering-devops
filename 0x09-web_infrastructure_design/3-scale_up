@@ -1,0 +1,5 @@
+![Task3]()
+
+Answer:
+
+Now, there are 3 servers. The application server, web server and database have been distributed with each of them in their own server. They are now a 'cluster server' which is a group of linked servers that work together as a single system. Another HAproxy loadbalancer is added to distribute the requests between the 3 servers. This will also help in the case of one server going down, the other servers can still handle requests.
