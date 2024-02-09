@@ -1,4 +1,4 @@
-![Task2]()
+![Task2](/0x09-web_infrastructure_design/img/Task2.png)
 
 Answers:
 
@@ -22,4 +22,3 @@ Issues with the infrastructure:
 
 3. Having servers with all the same components might be a problem. If one server goes down, the other server might not be able to handle the traffic. There should be a mix of servers with different components.
 
- 

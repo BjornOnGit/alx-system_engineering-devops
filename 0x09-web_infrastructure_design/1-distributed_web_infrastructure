@@ -1,4 +1,4 @@
-![Task1]()
+![Task1](/0x09-web_infrastructure_design/img/Task1.png)
 Answers:
 
 1. In this infrastructure, there are now two servers. Each server has it's own web server, application server, codebase, and database. Performance will improve especially where there are a lot of requests. There is also redundancy as if one server goes down, the other server can still handle requests. There is also a HA proxy loadbalancer. This will distribute the requests between the two servers. This will also help in the case of one server going down, the other server can still handle requests. This is a step towards high availability.
