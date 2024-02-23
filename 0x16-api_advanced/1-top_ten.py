@@ -1,24 +1,41 @@
 #!/usr/bin/python3
-"""
-A function that shows the top ten posts
-"""
-import requests as req
+'''A module containing functions for working with the Reddit API.
+'''
+import requests
+
+
+BASE_URL = 'https://www.reddit.com'
+'''Reddit's base API URL.
+'''
 
 
 def top_ten(subreddit):
-    """
-    Returns the top ten posts for a
-    given subreddit
-    """
-    if subreddit is None and type(subreddit) is not str:
-        return 0
-    base = 'https://www.reddit.com'
-    header = {'User-Agent': 'n_onyekachukwu'}
-    params = {'limit': 10}
-    res = req.get('{}/r/{}/hot.json'.format(base, subreddit), params=params,
-                  headers=header, allow_redirects=False)
-    if res.status_code == 404:
-        print("None")
-        return
-    results = res.json().get("data")
-    [print(c.get("data").get("title")) for c in results.get("children")]
+    '''Retrieves the title of the top ten posts from a given subreddit.
+    '''
+    api_headers = {
+        'Accept': 'application/json',
+        'User-Agent': ' '.join([
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+            'AppleWebKit/537.36 (KHTML, like Gecko)',
+            'Chrome/97.0.4692.71',
+            'Safari/537.36',
+            'Edg/97.0.1072.62'
+        ])
+    }
+    sort = 'top'
+    limit = 10
+    res = requests.get(
+        '{}/r/{}/.json?sort={}&limit={}'.format(
+            BASE_URL,
+            subreddit,
+            sort,
+            limit
+        ),
+        headers=api_headers,
+        allow_redirects=False
+    )
+    if res.status_code == 200:
+        for post in res.json()['data']['children'][0:10]:
+            print(post['data']['title'])
+    else:
+        print(None)
