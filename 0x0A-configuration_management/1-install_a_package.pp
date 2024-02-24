@@ -1,6 +1,7 @@
-# install flask from pip3
+# Installs a package
 
-exec { 'install python packages':
-  command => 'pip3 install flask==2.1.0 flask_restful apiai',
-  path    => ['/usr/bin/']
+python: :pip { 'flask':
+  pkgname => 'Flask',
+  ensure => '2.1.0',
+  pip_provider => 'pip3',
 }
